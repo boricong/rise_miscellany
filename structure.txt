@@ -1,0 +1,65 @@
+수동생성
+/src/config : 어플리케이션 설정 파일들을 모아놓은 디렉토리
+/src/controllers : 라우팅 로직과 비즈니스 로직을 처리하는 컨트롤러 파일들을 모아놓은 디렉토리
+/src/middlewares : 미들웨어 함수 파일들을 모아놓은 디렉토리
+/src/models : 데이터 모델 파일들을 모아놓은 디렉토리
+/src/routes : 라우팅 파일들을 모아놓은 디렉토리
+/src/services : 서비스 로직을 처리하는 파일들을 모아놓은 디렉토리
+/src/utils : 도우미 함수 파일들을 모아놓은 디렉토리
+/src/interfaces : TypeScript 인터페이스 파일들을 모아놓은 디렉토리
+/public : 정적 파일(css, js, 이미지 등)들을 모아놓은 디렉토리. 브라우저에서 접근(요청)할 수 있는 정적 파일을 저장
+/views : HTML 템플릿 파일들을 모아놓은 디렉토리
+/web : 서버에서 렌더링 되는 동적 파일 (HTML, Pug, EJS등)을 제공하는데 사용
+/web/components : UI 컴포넌트 파일들을 모아놓은 디렉토리
+/web/pages : 웹 페이지 파일들을 모아놓은 디렉토리
+/web/styles : CSS 파일들을 모아놓은 디렉토리
+/web/images : 이미지 파일들을 모아놓은 디렉토리
+/web/scripts : JavaScript 파일들을 모아놓은 디렉토리
+/test : 테스트 파일들을 모아놓은 디렉토리
+
+자동생성
+/node_modules : npm install 명령어를 사용하여 프로젝트에 필요한 모듈들을 설치할 때 자동으로 생성됩니다. 이 디렉토리는 외부 모듈들의 소스 코드 파일들이 포함되어 있으므로, 소스 코드 관리 시스템(Git 등)에서 제외되어야 합니다.
+/dist : TypeScript 코드를 컴파일하여 생성된 JavaScript 코드들이 위치하는 디렉토리입니다. 이 디렉토리는 tsc 명령어를 사용하여 TypeScript 코드를 컴파일할 때 자동으로 생성됩니다. 이 디렉토리는 빌드된 어플리케이션의 실행 파일이나 배포 파일들이 위치할 수 있습니다.
+
+
+- /node_modules       // npm으로 설치한 모듈들
+- /src                // 소스 코드 파일들이 위치하는 디렉토리
+  - /config           // 어플리케이션 설정 파일들
+  - /controllers      // 라우팅 로직과 비즈니스 로직을 처리하는 컨트롤러 파일들
+  - /middlewares      // 미들웨어 함수 파일들
+  - /models           // 데이터 모델 파일들
+  - /routes           // 라우팅 파일들
+  - /services         // 서비스 로직을 처리하는 파일들
+  - /utils            // 도우미 함수 파일들
+  - /interfaces       // TypeScript 인터페이스 파일들
+- /public             // 정적 파일(css, js, 이미지 등)들이 위치하는 디렉토리
+- /views              // HTML 템플릿 파일들이 위치하는 디렉토리
+- /web                // 웹 UI 파일들이 위치하는 디렉토리
+  - /components      // UI 컴포넌트 파일들
+  - /pages           // 웹 페이지 파일들
+  - /styles          // CSS 파일들
+  - /images          // 이미지 파일들
+  - /scripts         // JavaScript 파일들
+- /test               // 테스트 파일들이 위치하는 디렉토리
+- /dist               // TypeScript를 컴파일한 JavaScript 파일들이 위치하는 디렉토리
+- /app.ts             // 어플리케이션 진입 파일
+- /tsconfig.json      // TypeScript 설정 파일
+- /package.json       // 프로젝트 설정 파일
+- /package-lock.json  // npm 의존성 트리 정보 파일
+
+일반적으로 
+/public 경로는 정적 파일 (이미지, CSS 파일, JavaScript 파일 등)을 제공하는 데 사용되고, 
+/web 경로는 서버에서 렌더링되는 동적 파일 (HTML, Pug, EJS 등)을 제공하는 데 사용됩니다.
+/public 경로는 브라우저에서 직접 접근 가능한 파일들을 담고 있으므로, 클라이언트에서 요청할 수 있는 정적 파일들을 모두 이 경로에 넣습니다.
+반면에 /web 경로는 서버에서 렌더링되는 동적인 파일들을 담고 있으므로, 서버에서 렌더링되는 템플릿 파일이나 페이지 파일 등을 이 경로에 넣습니다.
+
+npm init -y
+npm install express typescript @types/express @types/node nodemon
+npm install express
+npm install ts-node
+npx tsc --init
+npm install mongoose
+npm install js-yaml
+npm install @types/js-yaml
+npm install vue
+npm install @types/vue

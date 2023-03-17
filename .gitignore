@@ -1,0 +1,17 @@
+# dependencies
+/node_modules
+
+# compiled output
+/dist
+
+# IDE files
+.vscode/
+*.js
+*.js.map
+
+# environment variables
+.env
+
+# logs
+*.log
+logs/
