@@ -15,3 +15,4 @@
 # logs
 *.log
 logs/
+config_template.yml

@@ -7,6 +7,8 @@ import HomeRouter from './src/routes/HomeRouter';
 
 const app: Application = express();
 
+//Entry file
+
 try {
   const config : any = yaml.load(fs.readFileSync('config.yml', 'utf8'));
 
