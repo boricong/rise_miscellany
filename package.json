@@ -1,25 +1,56 @@
 {
 
   "name": "rise_miscellany",
+
   "description": "",
+
   "version": "1.0.0",
+
   "main": "index.js",
+
   "dependencies": {
+
+    "@types/cron": "^2.0.1",
+
     "@types/express": "^4.17.17",
+
+    "@types/ftp": "^0.3.33",
+
     "@types/js-yaml": "^4.0.5",
+
     "@types/node": "^18.15.3",
+
+    "basic-ftp": "^5.0.2",
+
+    "cron": "^2.3.0",
+
     "express": "^4.18.2",
+
+    "ftp": "^0.3.10",
+
     "js-yaml": "^4.1.0",
+
     "mongoose": "^7.0.2",
+
     "nodemon": "^2.0.21",
+
     "ts-node": "^10.9.1",
+
     "typescript": "^5.0.2"
+
   },
-  "devDependencies": {},
+
   "scripts": {
+
     "test": "echo \"Error: no test specified\" && exit 1",
+
     "start": "nodemon --exec ts-node app.ts"
+
   },
+
   "author": "",
+
   "license": "ISC"
+
 }
+
