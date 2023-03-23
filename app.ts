@@ -4,6 +4,8 @@ import path from 'path';
 import yaml from 'js-yaml'; //typescript에서 js-yaml모듈의 type선언필요 (@types/js-yaml)
 // import HomeController from './src/controllers/HomeController';
 import HomeRouter from './src/routes/HomeRouter';
+import util from 'util';
+import RestAPIRouter from './src/routes/RestAPIRouter';
 
 const app: Application = express();
 
@@ -26,10 +28,11 @@ try {
 
   // HomeController를 사용하여 /home 경로로의 GET 요청을 처리합니다.
   app.get('/home', HomeRouter.index);
+  app.get('/ftpFileList', RestAPIRouter.index);
 
   // 서버 시작
-  app.listen(config.port, () => {
-    console.log('Server is listening on port 3000!');
+  app.listen(config.application.port, () => {
+    console.log(util.format('Server is listening on port %d!', config.application.port ));
   });
 
   // RestAPI 영역 

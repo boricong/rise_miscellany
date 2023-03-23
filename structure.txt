@@ -54,7 +54,8 @@
 반면에 /web 경로는 서버에서 렌더링되는 동적인 파일들을 담고 있으므로, 서버에서 렌더링되는 템플릿 파일이나 페이지 파일 등을 이 경로에 넣습니다.
 
 npm init -y
-npm install express typescript @types/express @types/node nodemon
+npm install express typescript @types/express @types/node
+npm install nodemon -g
 npm install express
 npm install ts-node
 npx tsc --init
@@ -63,3 +64,38 @@ npm install js-yaml
 npm install @types/js-yaml
 npm install vue
 npm install @types/vue
+
+
+launch.json (for vscode)
+{
+    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+    // 기존 특성에 대한 설명을 보려면 가리킵니다.
+    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "name": "nodemon",
+            
+            "program": "${workspaceFolder}/app.ts",
+            "request": "launch",
+            "restart": true,
+            "runtimeExecutable": "nodemon",
+            "runtimeArgs": ["--exec", "ts-node-dev", "--no-notify", "--respawn", "${workspaceFolder}/app.ts"],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+        {
+            "name": "Attach by Process ID",
+            "processId": "${command:PickProcess}",
+            "request": "attach",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        }
+    ]
+}

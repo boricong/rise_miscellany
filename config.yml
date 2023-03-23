@@ -1,5 +1,9 @@
- host: 192.168.1.156
- port: 21
- user: admin
- password: admin
- remotePath: /
+ftp: 
+  host: 127.0.0.1
+  port: 21
+  user: wooram.you
+  password: 1234
+  remotePath: /
+
+application:
+  port: 3000

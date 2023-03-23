@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import FTPFileList from '../services/FTPFileList'; // FTPFileList 클래스 파일 경로를 적절하게 지정
+import FTPFileList from '../services/RetrieveFTPInfo'; // FTPFileList 클래스 파일 경로를 적절하게 지정
 
 class RestAPIRouter {
   static async index(req: Request, res: Response) {

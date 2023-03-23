@@ -16,3 +16,4 @@
 *.log
 logs/
 config_template.yml
+config.yml
